@@ -1,21 +1,21 @@
 const manga = [
-    "name",
-    "rating",
-    "views",
-    "type",
-    "releaseFormats",
-    "releaseYear",
-    "uploadedDate",
-    "titleStatus",
-    "translationStatus",
-    "authors",
-    "artists",
-    "publishers",
-    "uploadedChapters",
-    "genres",
-    "alternateTitle",
-  ];
+  "name",
+  "rating",
+  "views",
+  "mangaType",
+  "releaseFormats",
+  "releaseYear",
+  "uploadedDate",
+  "titleStatus",
+  "translationStatus",
+  "authors",
+  "artists",
+  "publishers",
+  "uploadedChapters",
+  "genres",
+  "alternateTitle",
+];
 
-const fields = {manga};
+const fields = { manga };
 
-export {fields};
+export { fields };

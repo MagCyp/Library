@@ -7,6 +7,6 @@ const mangaTypeSchema = new Schema({
   },
 });
 
-const MangaType = model('mangaType', mangaTypeSchema);
+const MangaType = model('MangaType', mangaTypeSchema);
 
 export {MangaType};

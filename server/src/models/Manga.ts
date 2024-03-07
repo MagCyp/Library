@@ -6,7 +6,7 @@ const mangaSchema = new Schema({
   image:{type: String, default:"https://t.ly/xyXhX", required: true },
   rating: { type: Number, default: 0, required: true },
   views: { type: Number, default: 0, required: true },
-  type: { type: Types.ObjectId, ref: "MangaType", required: true },
+  mangaType: { type: Types.ObjectId, ref: "MangaType", required: true },
   releaseFormats: [{ type: Types.ObjectId, ref: "ReleaseFormat", required: true }],
   releaseYear: { type: String, required: true },
   uploadedDate: {

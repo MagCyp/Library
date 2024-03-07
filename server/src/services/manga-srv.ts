@@ -4,7 +4,18 @@ import { objects } from "../utils";
 
 export class MangaSrv {
   static async getMany(query, options) {
-    return Manga.find(query)
+    
+    const modifiedQuery = {};
+    for (const [key, value] of Object.entries(query)) {
+      if (typeof value === 'string' && value.includes(',')) {
+        modifiedQuery[key] = { $all: value.split(',').map(v => v.trim()) };
+      } else {
+        modifiedQuery[key] = value;
+      }
+    }
+    console.log(modifiedQuery);
+    
+    return Manga.find(modifiedQuery)
       .populate([
         { path: "releaseFormats", model: "ReleaseFormat", select: "name" },
         { path: "titleStatus", model: "Status", select: "label" },

@@ -20,10 +20,10 @@ export class MangaCtrl {
   }
 
   static async getOne(req: Request, res: CustomResponse) {
-    const user = await MangaSrv.getOne({ _id: req.params._id });
+    const manga = await MangaSrv.getOne({ _id: req.params._id });
 
     return res.send({
-      data: user,
+      data: manga,
     });
   }
 

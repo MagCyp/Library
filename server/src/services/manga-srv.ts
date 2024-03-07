@@ -13,8 +13,7 @@ export class MangaSrv {
         modifiedQuery[key] = value;
       }
     }
-    console.log(modifiedQuery);
-    
+
     return Manga.find(modifiedQuery)
       .populate([
         { path: "releaseFormats", model: "ReleaseFormat", select: "name" },
